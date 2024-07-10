@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful</h1>
+        <div class="success-message">
+            <p>Welcome, <strong>{{ user.name }}</strong>!</p>
+            <p>Your unique number: <strong>{{ user.unique_number }}</strong></p>
+        </div>
+        <div class="barcode-container">
+            <img src="{{ url_for('static', filename='barcodes/' + user.email + '.png') }}" alt="Barcode">
+        </div>
+        <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+
+    </div>
+</body>
+</html>

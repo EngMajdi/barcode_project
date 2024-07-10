@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='squ_logo.png') }}" alt="Sultan Qaboos University Logo" class="logo">
+        <h1>Welcome to the Exhibition Entry System</h1>
+        <a href="{{ url_for('register') }}" class="button">Register</a>
+        <a href="{{ url_for('login') }}" class="button">Login</a>
+    </div>
+</body>
+</html>
